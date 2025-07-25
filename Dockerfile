@@ -11,4 +11,4 @@ COPY unbound.sh /unbound.sh
 RUN sed -i 's/\r//g' /unbound.sh && \
     chmod +x /unbound.sh
 
-CMD ["/bin/sh", "/unbound.sh"]
+CMD ["/unbound.sh"]
