@@ -161,7 +161,7 @@ server:
     auto-trust-anchor-file: "/var/lib/unbound/root.key"
 
     # Deny queries of type ANY with an empty response.
-    deny-any: mp
+    deny-any: no
 
     # Harden against algorithm downgrade when multiple algorithms are
     # advertised in the DS record.
