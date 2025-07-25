@@ -32,13 +32,13 @@ else
     slabs=4
 fi
 
-if [ ! -f /etc/unbound/unbound.conf ]; then
+if [ ! -f /etc/unbound/unbound.conf.d/unbound.conf ]; then
     sed \
         -e "s/@MSG_CACHE_SIZE@/${msg_cache_size}/" \
         -e "s/@RR_CACHE_SIZE@/${rr_cache_size}/" \
         -e "s/@THREADS@/${threads}/" \
         -e "s/@SLABS@/${slabs}/" \
-        > /etc/unbound/unbound.conf << EOT
+        > /etc/unbound/unbound.conf.d/unbound.conf << EOT
 server:
     ###########################################################################
     # BASIC SETTINGS
