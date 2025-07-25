@@ -9,6 +9,6 @@ RUN wget -qO /etc/unbound/root.hints https://www.internic.net/domain/named.cache
 
 COPY ./unbound.sh /etc/unbound
 
-RUN chmod +x ./unbound.sh
+RUN chmod +x /etc/unbound/unbound.sh
 
 CMD ["/unbound.sh"]
