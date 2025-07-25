@@ -7,8 +7,8 @@ RUN apk add --no-cache unbound wget bash \
 RUN wget -qO /etc/unbound/root.hints https://www.internic.net/domain/named.cache \
   && unbound-anchor -a /var/lib/unbound/root.key || true
 
-COPY unbound.sh ./unbound.sh
-
-RUN chmod +x ./unbound.sh
+COPY unbound.sh /unbound.sh
+RUN sed -i 's/\r//g' /unbound.sh && \
+    chmod +x /unbound.sh
 
 CMD ["/bin/sh", "/unbound.sh"]
