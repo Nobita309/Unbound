@@ -38,7 +38,7 @@ if [ ! -f /etc/unbound/unbound.conf ]; then
         -e "s/@RR_CACHE_SIZE@/${rr_cache_size}/" \
         -e "s/@THREADS@/${threads}/" \
         -e "s/@SLABS@/${slabs}/" \
-> /etc/unbound/unbound.conf <<EOT
+        > /etc/unbound/unbound.conf << EOT
 server:
     ###########################################################################
     # BASIC SETTINGS
