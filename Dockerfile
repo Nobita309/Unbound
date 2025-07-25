@@ -11,4 +11,4 @@ COPY unbound.sh ./unbound.sh
 
 RUN chmod +x ./unbound.sh
 
-CMD ["./unbound.sh"]
+CMD ["/bin/sh", "/unbound.sh"]
