@@ -11,6 +11,4 @@ COPY ./unbound.sh /etc/unbound
 
 RUN chmod +x /unbound.sh
 
-COPY unbound.conf /etc/unbound/unbound.conf
-
 CMD ["/unbound.sh"]
