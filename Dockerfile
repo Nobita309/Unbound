@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache unbound wget bash perl \
+RUN apk add --no-cache unbound wget perl \
   && mkdir -p /var/lib/unbound \
   && chown -R unbound:unbound /var/lib/unbound
 
@@ -11,4 +11,4 @@ COPY unbound.sh /unbound.sh
 RUN sed -i 's/\r//g' /unbound.sh && \
     chmod +x /unbound.sh
 
-CMD ["/bin/sh", "/unbound.sh"]
+CMD ["/unbound.sh"]
