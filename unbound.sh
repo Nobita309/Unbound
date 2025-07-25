@@ -345,4 +345,4 @@ remote-control:
 EOT
 fi
 
-exec /usr/sbin/unbound -d -c /etc/unbound/unbound.conf
+exec /usr/sbin/unbound -d -c /etc/unbound/unbound.conf.d/unbound.conf
