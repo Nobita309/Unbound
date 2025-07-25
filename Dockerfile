@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-RUN apk add --no-cache unbound wget bash \
+RUN apk add --no-cache unbound wget bash perl \
   && mkdir -p /var/lib/unbound \
   && chown -R unbound:unbound /var/lib/unbound
 
